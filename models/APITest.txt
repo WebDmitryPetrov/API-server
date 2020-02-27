@@ -1,0 +1,110 @@
+POST http://localhost:3001/users/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "use342342342",
+    "password": "12sdfsdfsdff"
+}
+
+###
+
+POST http://localhost:3001/users/login HTTP/1.1
+content-type: application/json
+
+{
+    "name": "use342342342",
+    "password": "12sdfsdfsdff"
+}
+
+###
+
+GET http://localhost:3001/users/ HTTP/1.1
+
+###
+
+PUT http://localhost:3001/users/5df13d8f9febb37b0cd8db2e HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjRqdWFfNl9sQlBlelpvM0k4d3huTTVWalc3c3hYXzRzMUhIRDlHcERzZFkifQ.eyJpc3MiOiJJbUNvZGVyIiwic3ViIjoiQXV0aCIsImF1ZCI6IjVkZjI5MDM3M2ZmMjhhZDEzODcwZDU3ZCIsImlhdCI6MTU3NjE4MDMzNiwidHR5cGUiOiJhY2Nlc3MiLCJoZWFkZXIiOnsidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifSwianRpIjoiMTk1MmZlY2MtOWVlMS00ZDUxLWJjNzMtZmU1YzI4NWMwODVkIiwiZXhwIjoxNTc2MTgzMzM2fQ.dos6e6bM6rIY_M79WKOuJB_Qp-AEvuApdS_Tv6Hrwew
+
+{
+    "name": "username24"
+}
+
+###
+
+POST http://localhost:3001/films HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Good Film",
+    "tags": ["horror", "comedy"]
+}
+
+###
+
+POST http://localhost:3001/users/5df290373ff28ad13870d57d/films HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjRqdWFfNl9sQlBlelpvM0k4d3huTTVWalc3c3hYXzRzMUhIRDlHcERzZFkifQ.eyJpc3MiOiJJbUNvZGVyIiwic3ViIjoiQXV0aCIsImF1ZCI6IjVkZjI5MDM3M2ZmMjhhZDEzODcwZDU3ZCIsImlhdCI6MTU3NjE4MTE2OCwidHR5cGUiOiJhY2Nlc3MiLCJoZWFkZXIiOnsidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifSwianRpIjoiZWQ0NDcyMWUtZjdkMS00MjNkLTk3ZjAtOGFiZWQzZWNiODU4IiwiZXhwIjoxNTc2MTg0MTY4fQ.dfBZrS9HNz0b-E7jBsKngGj26DxodvHDGCn87hEWC3I
+
+{
+    "_id": "5df291313ff28ad13870d57e"
+}
+
+###
+
+GET http://localhost:3001/users/5df290373ff28ad13870d57d/films HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjRqdWFfNl9sQlBlelpvM0k4d3huTTVWalc3c3hYXzRzMUhIRDlHcERzZFkifQ.eyJpc3MiOiJJbUNvZGVyIiwic3ViIjoiQXV0aCIsImF1ZCI6IjVkZjI5MDM3M2ZmMjhhZDEzODcwZDU3ZCIsImlhdCI6MTU3NjE4MTczMiwidHR5cGUiOiJhY2Nlc3MiLCJoZWFkZXIiOnsidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifSwianRpIjoiZjM1MGE0M2MtNmRjNS00YTE4LThiZTUtMzU1NzJhMDc2MDRhIiwiZXhwIjoxNTc2MTg0NzMyfQ.4WmN978ncmoNHbUPFqTMoM3ZX60w7mX3OnHF8xIn1_U
+
+###
+
+DELETE http://localhost:3001/films/5df291313ff28ad13870d57e HTTP/1.1
+content-type: application/json
+
+###
+
+GET http://localhost:3001/users/5e01013823af627e80966707/client/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjRqdWFfNl9sQlBlelpvM0k4d3huTTVWalc3c3hYXzRzMUhIRDlHcERzZFkifQ.eyJpc3MiOiJJbUNvZGVyIiwic3ViIjoiQXV0aCIsImF1ZCI6IjVlMDEwMTM4MjNhZjYyN2U4MDk2NjcwNyIsImlhdCI6MTU3ODkzODI4NywidHR5cGUiOiJhY2Nlc3MiLCJoZWFkZXIiOnsidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifSwianRpIjoiZTI1NzEyYTktYmU0ZC00ZmMwLWE2MjItZGExZDAzMGQxZTZlIiwiZXhwIjoxNTc4OTQxMjg3fQ.v0J3n9Q0J9RyDLdtaM-Z2nnhK5Af_5i8s4lnimIOlMk
+
+###
+
+POST http://localhost:3001/users/5e01013823af627e80966707/client/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjRqdWFfNl9sQlBlelpvM0k4d3huTTVWalc3c3hYXzRzMUhIRDlHcERzZFkifQ.eyJpc3MiOiJJbUNvZGVyIiwic3ViIjoiQXV0aCIsImF1ZCI6IjVlMDEwMTM4MjNhZjYyN2U4MDk2NjcwNyIsImlhdCI6MTU3OTExMjMxMCwidHR5cGUiOiJhY2Nlc3MiLCJoZWFkZXIiOnsidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifSwianRpIjoiODk2OGZlODItMGM2Ny00MjA3LWJkYzktZDA5ZWY3NjIxNzgwIiwiZXhwIjoxNTc5MTE1MzEwfQ.nVGm8V-ucgsBkphIWOO3NYVlJ85W8i3uTUZAa710sBM
+
+{
+    "name": "Cowboy",
+    "surname": "Baby"
+}
+
+###
+
+POST http://localhost:3001/users/5e01013823af627e80966707/client/5e1f587cfe0a9f3dcde27923/appointment HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjRqdWFfNl9sQlBlelpvM0k4d3huTTVWalc3c3hYXzRzMUhIRDlHcERzZFkifQ.eyJpc3MiOiJJbUNvZGVyIiwic3ViIjoiQXV0aCIsImF1ZCI6IjVlMDEwMTM4MjNhZjYyN2U4MDk2NjcwNyIsImlhdCI6MTU3OTExMjMxMCwidHR5cGUiOiJhY2Nlc3MiLCJoZWFkZXIiOnsidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifSwianRpIjoiODk2OGZlODItMGM2Ny00MjA3LWJkYzktZDA5ZWY3NjIxNzgwIiwiZXhwIjoxNTc5MTE1MzEwfQ.nVGm8V-ucgsBkphIWOO3NYVlJ85W8i3uTUZAa710sBM
+
+{
+    "doctor": "Who",
+    "date": "2020-01-15T18:30:29.199Z",
+    "cab": 255
+}
+
+###
+
+POST http://localhost:3001/clinics HTTP/1.1
+content-type: application/json
+
+{
+    "name" : "Medsi",
+    "location" : {
+     "type": "Point",  
+     "coordinates": [37.352975, 55.855625]
+    }
+}
+
+###
+
+GET http://localhost:3001/clinics?lat=55.855625&long=37.352975 HTTP/1.1
+
+###

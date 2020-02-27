@@ -1,0 +1,2 @@
+curl -d '{"name":"Stepanov", "surname": "Stepanov", "_id":"1234", "clinic": "Medsi", "cab": "240", "schedule":"222", "spec":"ocul"}' -H "Cont 
+ent-Type: application/json" -X POST http://localhost:3000/doctors
