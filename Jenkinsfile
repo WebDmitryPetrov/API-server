@@ -20,8 +20,7 @@ pipeline {
                 when { // Условный оператор
                     branch 'dev'// Исполняется только для ветки dev
                 }
-                steps {
-                    sh 'docker container stop clinicsapi-dev'
+                steps {                    
                     sh 'docker container run --rm --detach --publish 3001:3001 --name clinicsapi-dev clinicsapi:latest'
                 }
             }
