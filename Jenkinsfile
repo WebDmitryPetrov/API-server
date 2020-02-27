@@ -22,7 +22,7 @@ pipeline {
                 }
                 steps {
                     sh 'docker container stop clinicsapi-dev'
-                    sh 'docker container run --rm --detach --publish 3000:3001 --name clinicsapi-dev clinicsapi:latest'
+                    sh 'docker container run --rm --detach --publish 3001:3001 --name clinicsapi-dev clinicsapi:latest'
                 }
             }
             stage('Deploy for Production') {
@@ -31,7 +31,7 @@ pipeline {
                 }
                 steps { 
                     sh 'docker container stop clinicsapi-prod'
-                    sh 'docker container run --rm --detach --publish 3001:3001 --name clinicsapi-prod clinicsapi:latest'
+                    sh 'docker container run --rm --detach --publish 3002:3001 --name clinicsapi-prod clinicsapi:latest'
                 }
             }
         }
